@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Kh2Host-f3057c9a-9645-46ad-abbd-3dd6db4d4295</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="7.0.0" />
+    <PackageReference Include="Scrutor" Version="4.2.2" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\LIB\Smart.Kh2Ems.EF.Core\Smart.Kh2Ems.EF.Core.csproj" />
+    <ProjectReference Include="..\..\LIB\Smart.Kh2Ems.Infrastructure\Smart.Kh2Ems.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Smart.PowerCUBE.Api">
+      <HintPath>..\..\..\bin\common_dll\Smart.PowerCUBE.Api.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Const\" />
+    <Folder Include="Features\Shard\" />
+  </ItemGroup>
+</Project>

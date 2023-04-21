@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="7.0.0" />
+    <PackageReference Include="scrutor" Version="4.2.2" />
+    <PackageReference Include="serilog.aspnetcore" Version="6.1.0" />
+    <PackageReference Include="Serilog.Extensions" Version="3.3.1" />
+    <PackageReference Include="Serilog.sinks.seq" Version="5.2.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\LIB\Smart.Kh2Ems.EF.Core\Smart.Kh2Ems.EF.Core.csproj" />
+    <ProjectReference Include="..\..\LIB\Smart.Kh2Ems.Infrastructure\Smart.Kh2Ems.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Shard\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Smart.PowerCUBE.Api">
+      <HintPath>..\..\..\bin\common_dll\Smart.PowerCUBE.Api.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
